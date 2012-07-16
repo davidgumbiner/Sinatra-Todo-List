@@ -1,0 +1,17 @@
+<section id="add">  
+  <form action="/" method="post">  
+    <textarea name="content" placeholder="Your item:"></textarea>  
+    <input type="submit" value="Add to-do item!">  
+  </form>  
+</section>
+  
+<% @notes.each do |note| %>
+<article>  
+    <p>  
+      <%= note.id %>. <%= note.content %>  
+      <span><a href="/<%= note.id %>/complete">[complete]</a></span>  
+    </p>  
+    <p class="links">
+</article>
+
+<% end %>
